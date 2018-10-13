@@ -1,7 +1,55 @@
 en:
+  flash_active_success: "Account activated!"
+  flash_invalid_link: "Invalid activation link."
+
+  flash_non_log_in: "Please log in."
+
+  flash_create_success: "Micropost created!"
+  flash_destroy_seccess: "Micropost deleted"
+
+  flash_info_email_sent: "Email sent with password reset instructions"
+  flash_danger_email_not_found: "Email address not found"
+  errors_password_empty: "Can't be empty"
+  flash_password_has_been_reset: "Password has been reset"
+  flash_password_reset_expired: "Password reset has expired."
+
+  message_account_not_active: "Account not activated."
+  message_notice_check_email: "Check your email for the activation link."
+  flash_danger_invalid_pass: "Invalid email/password combination"
+
+  flash_notice_check_email: "Please check your email to activate your account."
+  flash_update_success: "Your profile has been updated!"
+  flash_delete_success: "User deleted"
+
+  application_helper:
+    base_title: "Ruby on Rails Tutorial Sample App"
+
   layouts:
+    footer:
+      about: "About"
+      contact: "Contact"
+    header:
+      sample_app: "sample app"
+      home: "Home"
+      help: "Help"
+      users: "Users"
+      profile: "Profile"
+      setting: "Setting"
+      log_out: "Log out"
+      log_in: "Log in"
   microposts:
+    micropost:
+      delete: "delete"
+      data_confirm: "Are you sure?"
   password_resets:
+    edit:
+      page_title: "Reset password"
+      content_title: "Reset Password"
+      btn_update: "Update password"
+    new:
+      page_title: "Forgot password"
+      content_title: "Forgot password"
+      btn_submit: "Submit"
   relationships:
   sessions:
     new:
@@ -75,7 +123,7 @@ en:
       delete_link: "Delete"
       delete_confirm: "Are you sure?"
     edit:
-      page_tile: "Edit user"
+      page_title: "Edit user"
       save_change_button: "Save Change"
       content_title: "Update your profile"
       avatar_change: "Change"
