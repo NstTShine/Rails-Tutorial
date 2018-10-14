@@ -1,11 +1,13 @@
-<% provide :title, (t ".about_title") %>
+<% provide :title, t(".about_title") %>
 <h1><%= t ".content" %></h1>
 <p>
   <%= t ".the" %> <em><%= link_to (t ".ruby_on_rails_tutorial"),
-    (t ".ruby_on_rails_tutorial_link") %></em> <%= t ".is_a" %>
-  <%= link_to (t ".book"), (t ".book_link") %> <%= t ".and" %>
-  <%= link_to (t ".screencast_series"), (t ".screencast_series_link") %>
+    Settings.static_pages.rails_tutorial_link %></em> <%= t ".is_a" %>
+  <%= link_to (t ".book"), Settings.static_pages.book_link %> <%= t ".and" %>
+  <%= link_to (t ".screencast_series"),
+    Settings.static_pages.screencast_series_link %>
   <%= t ".to_teach_web_development_with" %>
-  <%= link_to (t ".ruby_on_rails"), (t ".ruby_on_rails_link") %>.
+  <%= link_to (t ".ruby_on_rails"), Settings.static_pages.ruby_on_rails_link %>.
   <%= t ".this_is_the_sample" %>
 </p>
+

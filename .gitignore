@@ -31,3 +31,4 @@ config/settings/*.local.yml
 config/environments/*.local.yml
 # Ignote uploaded test images
 /public/uploads
+/config/local_env.yml

@@ -5,6 +5,6 @@
   </div>
   <%= f.submit (t ".btn_text"), class: "btn btn-primary" %>
   <span class="picture">
-  <%= f.file_field :picture, accept: (t ".accept_image_extension") %>
+  <%= f.file_field :picture, accept:  Settings.shared.image_extension %>
   </span>
 <% end %>
