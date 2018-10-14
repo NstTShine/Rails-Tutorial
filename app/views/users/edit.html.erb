@@ -1,5 +1,5 @@
-<% provide :title, (t ".page_title") %>
-<% provide :button_text, (t ".save_change_button") %>
+<% provide :title, t(".page_title") %>
+<% provide :button_text, t(".save_change_button") %>
 <h1><%= t ".content_title" %></h1>
 
 <div class="row">
@@ -7,7 +7,8 @@
     <%= render "form" %>
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
-      <%= link_to (t ".avatar_change"), (t ".avatar_change_link"), target: "_blank" %>
+      <%= link_to (t ".avatar_change") ,
+        Settings.users_view.avatar_change_link, target: "_blank" %>
     </div>
   </div>
 </div>

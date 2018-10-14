@@ -1,9 +1,8 @@
-@import "bootstrap-sprockets" ;
-@import "bootstrap" ;
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'variables';
 
 /* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -216,8 +215,7 @@ input {
 }
 
 .checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin: -10px 0 10px;
   span {
     margin-left: 20px;
     font-weight: normal;

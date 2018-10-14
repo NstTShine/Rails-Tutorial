@@ -18,11 +18,15 @@ en:
   flash_danger_invalid_pass: "Invalid email/password combination"
 
   flash_notice_check_email: "Please check your email to activate your account."
+  flash_notice_create_fail: "Something was wrong!!!"
   flash_update_success: "Your profile has been updated!"
   flash_delete_success: "User deleted"
+  user_not_found: "User not found...!!"
 
   application_helper:
     base_title: "Ruby on Rails Tutorial Sample App"
+
+  micropost_validation_picture: "should be less then 5MB"
 
   layouts:
     footer:
@@ -63,7 +67,6 @@ en:
     micropost_form:
       text_area_placeholder: "Compose new micropost..."
       btn_text: "Post"
-      accept_image_extension: "image/jpeg, image/gif, image/png"
     stats:
       following: "following"
       followers: "followers"
@@ -76,43 +79,34 @@ en:
       content: "About"
       the: "The"
       ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
-      ruby_on_rails_tutorial_link: "http://www.railstutorial.org"
       is_a: "is a"
       book: "book"
-      book_link: "http://www.railstutorial.org/book"
       and: "and"
       screencast_series: "screencast series"
-      screencast_series_link: "http://screencasts.railstutorial.org"
       to_teach_web_development_with: "to teach web development with"
       ruby_on_rails: "Ruby on Rails"
-      ruby_on_rails_link: "http://rubyonrails.org"
       this_is_the_sample: "This is the sample application for the tutorial."
     contact:
       contact_title: "Contact"
       content: "Contact"
       content_detail: "Contact the Ruby on Rails Tutorial about the sample app at the"
       contact_page: "contact page"
-      contact_link: "http://www.railstutorial.org/contact"
     help:
       title_help: "Help"
       content: "Help"
       get_help_on_the_ruby_on_rails_tutorial_at_the: Get help on the Ruby on Rails Tutorial at the
       rails_totorial_help_page: "Rails Tutorial help page"
-      help_site_link: "http://www.railstutorial.org/help"
       to_get_help_on_this_sample_app: "To get help on this sample app, see the"
       ruby_on_rails_tutorials: "Ruby on Rails Tutorial book"
-      link_tutorials_book: "http://www.railstutorial.org/book"
     home:
       micropost_feed: "Micropost Feed"
       welcome_to_sample_app: "Welcome to the Sample App"
       this_is_the_home_page_for_the: "This is the home page for the"
       ruby_on_rails_tutorials: "Ruby on Rails Tutorial"
-      tutorial_link: "http://www.railstutorial.org"
       sample_application: "sample application."
       sign_up_now: "Sign up now!"
       rails_png: "rails.png"
       rails_logo: "Rails logo"
-      link_logo: "http://rubyonrails.org/"
   user_mailer:
   users:
     follow:
@@ -127,7 +121,6 @@ en:
       save_change_button: "Save Change"
       content_title: "Update your profile"
       avatar_change: "Change"
-      avatar_change_link: "http://gravatar.com/emails"
     index:
       page_title: "All users"
       content_title: "All users"

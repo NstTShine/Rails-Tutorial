@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       end
     else
       flash.now[:danger] = t "flash_danger_invalid_pass"
-      render "new"
+      render :new
     end
   end
 

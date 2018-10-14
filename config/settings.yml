@@ -1,0 +1,31 @@
+mailer:
+  default_email: <%= ENV["DEFAULT_MAIL_FROM"] %>
+microposts:
+  content_max_length: 140
+  picture_capacity: 5
+users:
+  max_name: 50
+  max_email: 255
+  min_pass: 6
+  pass_reset_expired: 2
+layouts:
+  news_link: "http://news.railstutorial.org/"
+micropost:
+  gravatar_size: 50
+shared:
+  image_extension: "image/jpeg, image/gif, image/png"
+  user_info_gravatar_size: 50
+static_pages:
+  ruby_on_rails_link: "http://rubyonrails.org"
+  screencast_series_link: "http://screencasts.railstutorial.org"
+  book_link: "http://www.railstutorial.org/book"
+  rails_tutorial_link: "http://www.railstutorial.org"
+  contact_link: "http://www.railstutorial.org/contact"
+  help_site_link: "http://www.railstutorial.org/help"
+  link_logo: "http://rubyonrails.org/"
+users_view:
+  gravatar_profile: 50
+  avatar_change_link: "http://gravatar.com/emails"
+  follow_user_gravatar_size: 30
+helper:
+  gravatar_options_size: 80

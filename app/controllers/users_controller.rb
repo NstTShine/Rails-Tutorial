@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :show, :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
+  before_action :load_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.paginate page: params[:page]
@@ -18,31 +19,28 @@ class UsersController < ApplicationController
       flash[:info] = t "flash_notice_check_email"
       redirect_to root_url
     else
-      render "new"
+      flash[:danger] = t "flash_notice_create_fail"
+      render :new
     end
   end
 
   def show
-    @user = User.find_by id: params[:id]
     @microposts = @user.microposts.paginate page: params[:page]
   end
 
-  def edit
-    @user = User.find_by id: params[:id]
-  end
+  def edit;end
 
   def update
-    @user = User.find_by id: params[:id]
     if @user.update_attributes user_params
       flash[:success] = t "flash_update_success"
       redirect_to @user
     else
-      render "edit"
+      render :edit
     end
   end
 
   def destroy
-    User.find_by(id: params[:id]).destroy
+    @user.destroy
     flash[:success] = t "flash_delete_success"
     redirect_to users_url
   end
@@ -62,6 +60,13 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+    flash[:danger] = t "user_not_found"
+    redirect_to root_url
+  end
 
   def user_params
     params.require(:user).permit :name, :email, :password,
