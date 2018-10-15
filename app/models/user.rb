@@ -94,6 +94,14 @@ class User < ApplicationRecord
     following.include? other_user
   end
 
+  def for_relationship other_user = nil
+    if other_user && self.following?(other_user)
+      self.active_relationships.find_by followed_id: other_user.id
+    else
+      self.active_relationships.build
+    end
+  end
+
   private
   # Converts email to all down-case
   def downcase_email
